@@ -3,9 +3,9 @@ Bodega MiPalomita es un sistema de gestión para bodegas que permite registrar p
 
 | Equipo | Rol | Porcentaje |
 | :--- | :--- | :---: |
-| Anthony Moises Condori Choccata | Desarrolladores | 100% |
+| Andrade Arapa Luis Eduardo | Desarrolladores | 100% |
+| Ortiz Saavedra Sarah Megan | Desarrolladores | 100% |
 | Maria Quispe Sinticala  | Desarrolladores | 100% |
-|Mark Hancco Vargas | Desarrolladores | 100% |
 | | **Total** | **100%** |
 
 | Entregables | URL |
