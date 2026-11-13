@@ -1,3 +1,4 @@
+# Equipo: CopyPasteDX 
 # Proyecto: BodegaMiPalomita
 Bodega MiPalomita es un sistema de gestión para bodegas que permite registrar productos y ventas de forma rápida mediante un carrito de compras, calculando automáticamente el total y el vuelto. La aplicación descuenta el stock en cada venta, genera la boleta correspondiente y alerta cuando un producto está por agotarse o vencer, además de ofrecer un resumen de las ventas del día.
 
@@ -5,7 +6,7 @@ Bodega MiPalomita es un sistema de gestión para bodegas que permite registrar p
 | :--- | :--- | :---: |
 | Andrade Arapa Luis Eduardo | Desarrolladores | 100% |
 | Ortiz Saavedra Sarah Megan | Desarrolladores | 100% |
-| Maria Quispe Sinticala  | Desarrolladores | 100% |
+| Quispe Sinticala Maria Isabel  | Desarrolladores | 100% |
 | | **Total** | **100%** |
 
 | Entregables | URL |
@@ -28,7 +29,7 @@ Bodega MiPalomita es un sistema de gestión para bodegas que permite registrar p
 MiPalomita/
 ├── src/
 │   └── mipalomita/
-│       ├── Main.java                    # Menú principal (consola)
+│       ├── Main.java                    # Menú principal
 │       ├── modelo/                      # Productos y ventas
 │       │   ├── Producto.java            # Clase abstracta
 │       │   ├── ProductoPerecible.java
@@ -46,7 +47,7 @@ MiPalomita/
 │           ├── Bodega.java
 │           └── ReporteDiario.java
 ├── docs/
-│   └── diagrama-uml.png                 # Tu diagrama de clases
+│   └── diagrama-uml.png                 
 ├── .gitignore
 └── README.md
 ```
