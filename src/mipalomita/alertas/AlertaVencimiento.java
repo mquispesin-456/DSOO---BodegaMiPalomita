@@ -1,3 +1,10 @@
+package mipalomita.alertas;
+
+import mipalomita.modelo.ProductoPerecible;
+
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class AlertaVencimiento implements Alertable {
     private ProductoPerecible producto;
     private int diasAviso;

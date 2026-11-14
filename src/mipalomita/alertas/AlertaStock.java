@@ -1,3 +1,7 @@
+package mipalomita.alertas;
+
+import mipalomita.modelo.Producto;
+
 public class AlertaStock implements Alertable {
     private Producto producto;
 
