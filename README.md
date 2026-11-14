@@ -1,58 +1,88 @@
-# Equipo: CopyPasteDX 
-# Proyecto: BodegaMiPalomita
-Bodega MiPalomita es un sistema de gestión para bodegas que permite registrar productos y ventas de forma rápida mediante un carrito de compras, calculando automáticamente el total y el vuelto. La aplicación descuenta el stock en cada venta, genera la boleta correspondiente y alerta cuando un producto está por agotarse o vencer, además de ofrecer un resumen de las ventas del día.
+# Bodega MiPalomita
 
-| Equipo | Rol | Porcentaje |
-| :--- | :--- | :---: |
-| Andrade Arapa Luis Eduardo | Desarrolladores | 100% |
-| Ortiz Saavedra Sarah Megan | Desarrolladores | 100% |
-| Quispe Sinticala Maria Isabel  | Desarrolladores | 100% |
-| | **Total** | **100%** |
+**Equipo:** CopyPasteDX
+**Curso:** Desarrollo de Software Orientado a Objetos, EPIS - UNSA 2026
 
-| Entregables | URL |
-| :--- | :--- |
+Bodega MiPalomita es un sistema de gestión para bodegas que permitirá registrar productos y ventas mediante un carrito de compras, calculando el total y el vuelto, descontando el stock en cada venta, generando la boleta y alertando cuando un producto esté por agotarse o vencer.
+
+## Estado actual
+
+**Sprint 1 (9-13 nov 2026):** clases base del modelo funcionando por consola: productos perecibles y no perecibles, inventario, métodos de pago y alertas.
+**Siguiente:** interfaz gráfica (ventana principal, productos y carrito).
+
+## Equipo
+
+| Integrante | Rol |
+|---|---|
+| Andrade Arapa Luis Eduardo | Líder / Desarrollador |
+| Ortiz Saavedra Sarah Megan | Desarrolladora |
+| Quispe Sinticala María Isabel | Desarrolladora |
+
+## Entregables
+
+| Entregable | URL |
+|---|---|
 | Repositorio | https://github.com/mquispesin-456/DSOO---BodegaMiPalomita.git |
-| **Informes**[^1] | |
 
-
-# Tecnología utilizada[^2]
+## Tecnología utilizada
 
 | Ítem | Tecnología |
-| :--- | :--- |
-| **Desarrollo** | GNU/Linux |
-| | Git |
-| | Github |
+|---|---|
+| Lenguaje | Java (JDK 17 o superior) |
+| Control de versiones | Git y GitHub |
+| Editor | Visual Studio Code |
 
+## Cómo ejecutar
 
-# Estructura del proyecto
+**Requisito:** tener instalado un JDK (17 o superior). Se verifica con `javac -version`.
+
+1. Clonar el repositorio:
+
 ```bash
-MiPalomita/
+git clone https://github.com/mquispesin-456/DSOO---BodegaMiPalomita.git
+cd DSOO---BodegaMiPalomita
+```
+
+2. Compilar (desde la carpeta `src`):
+
+```bash
+cd src
+javac mipalomita/*/*.java mipalomita/*.java
+```
+
+3. Ejecutar el menú de gestión de productos:
+
+```bash
+java mipalomita.MenuProductos
+java mipalomita.PruebaPagos
+java mipalomita.PruebaProductos
+```
+
+## Estructura del proyecto
+
+```text
+DSOO---BodegaMiPalomita/
 ├── src/
 │   └── mipalomita/
-│       ├── Main.java                    # Menú principal
-│       ├── modelo/                      # Productos y ventas
-│       │   ├── Producto.java            # Clase abstracta
+│       ├── MenuProductos.java        # Menú de consola para productos
+│       ├── PruebaProductos.java      # Prueba de productos e inventario
+│       ├── modelo/
+│       │   ├── Producto.java         # Clase abstracta
 │       │   ├── ProductoPerecible.java
 │       │   ├── ProductoNoPerecible.java
-│       │   ├── ItemVenta.java
-│       │   ├── Carrito.java
-│       │   ├── Boleta.java
-│       │   └── Venta.java
-│       ├── alertas/                     # Interfaz y sus implementaciones
-│       │   ├── Alertable.java           # Interfaz
+│       │   └── (clases de pago y de venta: confirmar ubicación)
+│       ├── alertas/                  # (confirmar)
+│       │   ├── Alertable.java
 │       │   ├── AlertaStock.java
 │       │   └── AlertaVencimiento.java
-│       └── gestion/                     # Clases que administran todo
-│           ├── Inventario.java
-│           ├── Bodega.java
-│           └── ReporteDiario.java
+│       └── gestion/
+│           └── Inventario.java
 ├── docs/
-│   └── diagrama-uml.png                 
-├── .gitignore
+│   └── diagrama-uml.png
 └── README.md
 ```
 
-# Referencias
-- https://askubuntu.com/
+## Referencias
+
 - https://git-scm.com/
 - https://github.com/
