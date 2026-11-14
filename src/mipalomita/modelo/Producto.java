@@ -30,6 +30,15 @@ public abstract class Producto {
         return true;
     }
 
+    // Suma unidades al stock (reposición). Devuelve false si la cantidad no es válida
+    public boolean aumentarStock(int cantidad) {
+        if (cantidad <= 0) {
+            return false;
+        }
+        stock += cantidad;
+        return true;
+    }
+
     public boolean estaPorAgotarse() {
         return stock <= stockMinimo;
     }
