@@ -1,11 +1,15 @@
 package mipalomita;
 
+import mipalomita.alertas.Alertable;
+import mipalomita.alertas.AlertaStock;
+import mipalomita.alertas.AlertaVencimiento;
 import mipalomita.gestion.Inventario;
 import mipalomita.modelo.Producto;
 import mipalomita.modelo.ProductoNoPerecible;
 import mipalomita.modelo.ProductoPerecible;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class PruebaProductos {
     public static void main(String[] args) {
@@ -32,6 +36,20 @@ public class PruebaProductos {
         System.out.println("--- Ordenado por stock ---");
         for (Producto x : inv.ordenarPorStock()) {
             System.out.println(x.getNombre() + ": " + x.getStock());
+        }
+
+        System.out.println("--- Alertas ---");
+        for (Producto x : inv.ordenarPorNombre()) {
+            ArrayList<Alertable> alertas = new ArrayList<>();
+            alertas.add(new AlertaStock(x));
+            if (x instanceof ProductoPerecible) {
+                alertas.add(new AlertaVencimiento((ProductoPerecible) x, 7));
+            }
+            for (Alertable a : alertas) {
+                String msg = a.generarAlerta();
+                if (!msg.isEmpty())
+                    System.out.println(msg);
+            }
         }
 
         System.out.println("--- Descontar stock ---");
