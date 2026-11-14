@@ -70,8 +70,7 @@ DSOO---BodegaMiPalomita/
 │       │   ├── Producto.java         # Clase abstracta
 │       │   ├── ProductoPerecible.java
 │       │   ├── ProductoNoPerecible.java
-│       │   └── (clases de pago y de venta: confirmar ubicación)
-│       ├── alertas/                  # (confirmar)
+│       ├── alertas/                  
 │       │   ├── Alertable.java
 │       │   ├── AlertaStock.java
 │       │   └── AlertaVencimiento.java
